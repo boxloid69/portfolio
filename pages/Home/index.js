@@ -30,25 +30,6 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      {/* Navigation */}
-      <Navbar bg="dark" variant="dark" expand="lg" className="py-3">
-        <Container>
-          <Navbar.Brand as={Link} to="/">
-            <i className="bi bi-code-slash me-2"></i>
-            Ahmed Abdullah Hashmi
-          </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav>
-              <Nav.Link as={Link} to="/" className="active">Home</Nav.Link>
-              <Nav.Link as={Link} to="/education">Education</Nav.Link>
-              <Nav.Link as={Link} to="/projects">Projects</Nav.Link>
-              <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
-
       {/* Profile Section */}
       <Container className="text-center my-5">
         <img src={profileImg} alt="Profile" className={styles.profileImg} />
