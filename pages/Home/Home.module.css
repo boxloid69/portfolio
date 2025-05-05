@@ -1,0 +1,63 @@
+.home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profileImg {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #197642;
+  }
+  
+  .floatingBox {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+  
+  .floatingBox:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  
+  .skillBox {
+    background-color: #f8f9fa;
+    border: none;
+    height: 100%;
+  }
+  
+  .skillBox:hover {
+    background-color: #e9ecef;
+  }
+  
+  .footer {
+    margin-top: auto;
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+  }
+  
+  .socialLinks a {
+    margin: 0 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  .socialLinks a:hover {
+    color: #197642;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .profileImg {
+      width: 150px;
+      height: 150px;
+    }
+    
+    .socialLinks {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }

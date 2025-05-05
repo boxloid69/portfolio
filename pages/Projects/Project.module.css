@@ -1,0 +1,42 @@
+.projects {
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .title {
+    color: var(--primary-color);
+    margin-bottom: 2rem !important;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .gridContainer {
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .projects {
+      padding: 1rem;
+    }
+    
+    .title {
+      font-size: 1.75rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .projects {
+      padding: 0.5rem;
+    }
+    
+    .title {
+      font-size: 1.5rem !important;
+    }
+    
+    .gridContainer {
+      margin-top: 1rem;
+    }
+  }
