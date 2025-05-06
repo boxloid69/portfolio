@@ -1,10 +1,9 @@
-import { Container, Navbar, Nav, Card, Row, Col } from 'react-bootstrap';
+import { Container, Card, Row, Col } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import profileImg from '../../assets/profile.jpeg';
+import { useTheme } from '../../context/ThemeContext'; // Make sure you're using this correctly
 import styles from './Home.module.css';
 
 const Home = () => {
@@ -28,13 +27,28 @@ const Home = () => {
     { title: "Design & Analysis of Algorithms", value: "Grade: A+" }
   ];
 
+  // Access darkMode state from ThemeContext
+  const { darkMode } = useTheme();
+
+  // Set color scheme based on theme
+  const textColor = darkMode ? '#ffffff' : '#000000';
+  const backgroundColor = darkMode ? '#121212' : '#ffffff';
+  const cardBackgroundColor = darkMode ? '#333' : '#fff';
+
   return (
-    <div className={styles.home}>
+    <div
+      className={styles.home}
+      style={{
+        backgroundColor: backgroundColor,
+        color: textColor,
+        minHeight: '100vh', // Ensure the page takes full height
+      }}
+    >
       {/* Profile Section */}
       <Container className="text-center my-5">
         <img src={profileImg} alt="Profile" className={styles.profileImg} />
-        <h2 className="mt-4">Ahmed Abdullah Hashmi</h2>
-        <p className="lead">Web Developer | UI/UX Designer | Software Engineer</p>
+        <h2 className="mt-4" style={{ color: textColor }}>Ahmed Abdullah Hashmi</h2>
+        <p className="lead" style={{ color: textColor }}>Web Developer | UI/UX Designer | Software Engineer</p>
       </Container>
 
       {/* Roles Section */}
@@ -42,7 +56,13 @@ const Home = () => {
         <Row className="g-4 justify-content-center">
           {roles.map((role, index) => (
             <Col md={4} key={index}>
-              <Card className={styles.floatingBox}>
+              <Card
+                className={styles.floatingBox}
+                style={{
+                  backgroundColor: cardBackgroundColor,
+                  color: textColor
+                }}
+              >
                 <Card.Body>
                   <Card.Title>{role.title}</Card.Title>
                   <Card.Text>{role.description}</Card.Text>
@@ -55,11 +75,17 @@ const Home = () => {
 
       {/* Skills Section */}
       <Container className="my-5">
-        <h3 className="text-center mb-4">Skills</h3>
+        <h3 className="text-center mb-4" style={{ color: textColor }}>Skills</h3>
         <Row className="g-4">
           {skills.map((skill, index) => (
             <Col md={4} key={index}>
-              <Card className={styles.skillBox}>
+              <Card
+                className={styles.skillBox}
+                style={{
+                  backgroundColor: cardBackgroundColor,
+                  color: textColor
+                }}
+              >
                 <Card.Body>
                   <Card.Title>{skill.title}</Card.Title>
                   <Card.Text>{skill.description}</Card.Text>
@@ -72,11 +98,17 @@ const Home = () => {
 
       {/* Achievements Section */}
       <Container className="my-5">
-        <h2 className="text-center mb-4">My Achievements</h2>
+        <h2 className="text-center mb-4" style={{ color: textColor }}>My Achievements</h2>
         <Row className="g-4 justify-content-center">
           {achievements.map((achievement, index) => (
             <Col md={3} key={index}>
-              <Card className={styles.floatingBox}>
+              <Card
+                className={styles.floatingBox}
+                style={{
+                  backgroundColor: cardBackgroundColor,
+                  color: textColor
+                }}
+              >
                 <Card.Body>
                   <Card.Title>{achievement.title}</Card.Title>
                   <Card.Text>{achievement.value}</Card.Text>
@@ -88,16 +120,16 @@ const Home = () => {
       </Container>
 
       {/* Footer */}
-      <footer className={styles.footer}>
+      <footer className={styles.footer} style={{ backgroundColor: darkMode ? '#333' : '#fff', color: textColor }}>
         <Container className="text-center py-4">
           <p>Connect with me:</p>
           <div className={styles.socialLinks}>
-            <a href="#"><FontAwesomeIcon icon={faInstagram} /> Instagram</a>
-            <a href="#"><FontAwesomeIcon icon={faTwitter} /> Twitter</a>
-            <a href="#"><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
-            <a href="#"><FontAwesomeIcon icon={faGithub} /> GitHub</a>
+            <a href="#" style={{ color: textColor }}><FontAwesomeIcon icon={faInstagram} /> Instagram</a>
+            <a href="#" style={{ color: textColor }}><FontAwesomeIcon icon={faTwitter} /> Twitter</a>
+            <a href="#" style={{ color: textColor }}><FontAwesomeIcon icon={faLinkedin} /> LinkedIn</a>
+            <a href="#" style={{ color: textColor }}><FontAwesomeIcon icon={faGithub} /> GitHub</a>
           </div>
-          <p className="mt-3">© 2025 Ahmed Abdullah Hashmi | All Rights Reserved</p>
+          <p className="mt-3" style={{ color: textColor }}>© 2025 Ahmed Abdullah Hashmi | All Rights Reserved</p>
         </Container>
       </footer>
     </div>
