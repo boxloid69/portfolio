@@ -19,3 +19,14 @@ This is my personal portfolio website built with **React**, **Material UI (MUI)*
 
 ## Installation
 
+<img width="651" alt="image" src="https://github.com/user-attachments/assets/bc333fe8-1d19-4fb3-97ce-0395c015dc47" />
+<img width="683" alt="Screenshot 2025-05-06 122926" src="https://github.com/user-attachments/assets/936f52d3-ccab-46dc-867a-c755a89da48b" />
+![Screenshot 2025-05-06 123119](https://github.com/user-attachments/assets/52d0197e-eb4d-4660-86b7-2ba1c2e5fc42)
+![Screenshot 2025-05-06 123149](https://github.com/user-attachments/assets/bdcc0c28-b653-4bc9-b5e3-35c04fea8c29)
+![Screenshot 2025-05-06 123230](https://github.com/user-attachments/assets/0880943b-4c56-492f-a0a1-d305a7c5ef45)
+![Screenshot 2025-05-06 123305](https://github.com/user-attachments/assets/1e745189-a07a-4b80-8d87-aaaec38d8c64)
+
+
+
+
+
