@@ -1,0 +1,45 @@
+
+.appBar {
+    z-index: 1300 !important;
+  }
+  
+  .toolbar {
+    justify-content: space-between;
+    padding: 0 24px !important;
+  }
+  
+  .brand {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+  }
+  
+  .brand i {
+    margin-right: 12px;
+    font-size: 1.5rem;
+  }
+  
+  .menuButton {
+    margin-right: 16px;
+  }
+  
+  /* SideNav.module.css */
+  .drawerList {
+    width: 240px;
+    padding-top: 64px;
+  }
+  
+  /* App.css */
+  .mainContent {
+    margin-top: 64px;
+    padding: 24px;
+  }
+  
+  @media (max-width: 768px) {
+    .mainContent {
+      margin-top: 56px;
+      padding: 16px;
+    }
+  }
