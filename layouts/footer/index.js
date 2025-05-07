@@ -15,7 +15,7 @@ const Footer = () => (
       zIndex: (theme) => theme.zIndex.appBar,
     }}
   >
-    <Typography variant="body2">© {new Date().getFullYear()} Ahmad Hassan</Typography>
+    <Typography variant="body2">© {new Date().getFullYear()} Ahmed Abdullah Hashmi</Typography>
   </Box>
 );
 
